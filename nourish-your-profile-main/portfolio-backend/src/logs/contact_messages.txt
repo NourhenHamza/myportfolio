@@ -1,0 +1,139 @@
+
+=== Nouveau message de contact ===
+Date: 2025-08-07 12:26:55
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+=====================================
+
+
+=== Nouveau message de contact ===
+Date: 2025-08-07 12:42:55
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+=====================================
+
+
+=== Nouveau message de contact ===
+Date: 2025-08-07 12:43:38
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+=====================================
+
+
+=== Nouveau message de contact ===
+Date: 2025-08-07 12:45:37
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+=====================================
+
+
+=== Nouveau message de contact ===
+Date: 2025-08-07 12:49:26
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+=====================================
+
+
+=== Message non envoyé par email (config manquante) ===
+Date: 2025-08-07 12:53:02
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Erreur: Configuration SMTP manquante. Vérifiez les variables d'environnement SMTP_USER et SMTP_PASS dans le fichier .env
+=====================================
+
+
+=== Message non envoyé par email (config manquante) ===
+Date: 2025-08-07 12:57:05
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Erreur: Configuration SMTP manquante. Vérifiez les variables d'environnement SMTP_USER et SMTP_PASS dans le fichier .env
+=====================================
+
+
+=== Message non envoyé par email (config manquante) ===
+Date: 2025-08-07 13:04:08
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Erreur: Configuration SMTP manquante. Vérifiez les variables d'environnement SMTP_USER et SMTP_PASS dans le fichier .env
+=====================================
+
+
+=== Message non envoyé par email (config manquante) ===
+Date: 2025-08-07 13:04:58
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Erreur: Configuration SMTP manquante. Vérifiez les variables d'environnement SMTP_USER et SMTP_PASS dans le fichier .env
+=====================================
+
+
+=== Message non envoyé par email (config manquante) ===
+Date: 2025-08-07 13:16:11
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Erreur: Configuration SMTP manquante. Vérifiez les variables d'environnement SMTP_USER et SMTP_PASS dans le fichier .env
+=====================================
+
+
+=== Email envoyé avec succès ===
+Date: 2025-08-07 13:27:01
+Nom: mootez
+Email: mootezammar4@gmail.com
+Sujet: hh
+Message: hi
+Destinataire: nourhenhamzaa@gmail.com
+Status: Envoyé avec succès
+=====================================
+
+
+=== Email envoyé avec succès ===
+Date: 2025-08-07 13:50:49
+Nom: Nourhen
+Email: eyoueya86@gmail.com
+Sujet: Nourhen
+Message: Nourhen
+Destinataire: nourhenhamzaa@gmail.com
+Status: Envoyé avec succès
+=====================================
+
+
+=== Email envoyé avec succès ===
+Date: 2025-08-07 15:49:16
+Nom: Nourhen
+Email: eyoueya86@gmail.com
+Sujet: Nourhen
+Message: ghui
+Destinataire: nourhenhamzaa@gmail.com
+Status: Envoyé avec succès
+=====================================
+
+
+=== Email envoyé avec succès ===
+Date: 2025-08-13 20:45:13
+Nom: mootez
+Email: eyoueya86@gmail.com
+Sujet: Nourhen
+Message: hi
+Destinataire: nourhenhamzaa@gmail.com
+Status: Envoyé avec succès
+=====================================
+
