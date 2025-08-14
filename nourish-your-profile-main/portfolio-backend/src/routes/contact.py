@@ -8,9 +8,19 @@ from datetime import datetime
 
 contact_bp = Blueprint('contact', __name__)
 
-@contact_bp.route('/contact', methods=['POST'])
+@contact_bp.route('/contact', methods=['GET', 'POST'])
 @cross_origin()
 def send_contact_message():
+    # Handle GET request
+    if request.method == 'GET':
+        return jsonify({
+            'message': 'Contact endpoint',
+            'method': 'POST required',
+            'required_fields': ['name', 'email', 'subject', 'message'],
+            'endpoint': '/api/contact'
+        }), 200
+    
+    # Handle POST request (existing logic)
     try:
         data = request.get_json()
         
@@ -200,4 +210,3 @@ Erreur: {error_msg}
             'error': 'Erreur lors du traitement du message',
             'details': str(e)
         }), 500
-
