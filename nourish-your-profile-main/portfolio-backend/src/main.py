@@ -1,6 +1,8 @@
 import os
 import sys
 from dotenv import load_dotenv
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 # Load environment variables from .env file
 env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
@@ -9,35 +11,23 @@ load_dotenv(dotenv_path=env_path, override=True)
 # Add project directory to Python path
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from flask import Flask, jsonify
-from flask_cors import CORS
-from src.models.user import db
-from src.routes.user import user_bp
-from src.routes.contact import contact_bp
-from src.routes.cv import cv_bp
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'asdf#FGSgvasgf$5$WGT')
 
-# Configure CORS with your Render domain and local development
+# Configure CORS
 CORS(app, origins=[
-    'https://myportfolio-osjl.onrender.com',  # Your Render domain
-    'https://myportfolio-cqik.vercel.app',    # Your Vercel domain
-    'http://localhost:3000',                  # Local development
-    'http://127.0.0.1:3000'                   # Alternative localhost
+    'https://myportfolio-osjl.onrender.com',
+    'https://myportfolio-cqik.vercel.app',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
 ])
 
-# Register blueprints with explicit URL prefixes
-app.register_blueprint(user_bp, url_prefix='/api/user')
+# Only import and register blueprints you're actually using
+from routes.contact import contact_bp
+from routes.cv import cv_bp
+
 app.register_blueprint(contact_bp, url_prefix='/api/contact')
 app.register_blueprint(cv_bp, url_prefix='/api/cv')
-
-# Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db.init_app(app)
-with app.app_context():
-    db.create_all()
 
 @app.route('/')
 def home():
@@ -56,16 +46,10 @@ def home():
                 "url": "/api/cv/download-cv",
                 "methods": ["GET"],
                 "description": "Download CV"
-            },
-            "user_auth": {
-                "url": "/api/user",
-                "methods": ["GET", "POST"],
-                "description": "User authentication"
             }
         }
     })
 
-# Error handler for 404
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({
@@ -74,8 +58,7 @@ def not_found(error):
         "message": "Resource not found",
         "available_endpoints": {
             "contact": "/api/contact",
-            "download_cv": "/api/cv/download-cv",
-            "user_auth": "/api/user"
+            "download_cv": "/api/cv/download-cv"
         }
     }), 404
 
