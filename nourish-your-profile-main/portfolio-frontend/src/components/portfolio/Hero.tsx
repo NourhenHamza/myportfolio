@@ -13,7 +13,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     // Ouvrir l'URL de téléchargement du CV dans un nouvel onglet
-    window.open('http://localhost:5000/api/download-cv', '_blank')
+    window.open('myportfolio-production-4276.up.railway.app/api/download-cv', '_blank')
   }
 
   return (
