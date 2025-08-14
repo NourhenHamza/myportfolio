@@ -25,7 +25,7 @@ const Contact = () => {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('myportfolio-production-4276.up.railway.app/api/contact', {
+      const response = await fetch('https://myportfolio-osjl.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
