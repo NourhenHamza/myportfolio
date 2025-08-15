@@ -2,17 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "portfolio-frontend/package.json",
+      "src": "nourish-your-profile-main/portfolio-frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "portfolio-frontend/dist"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "portfolio-frontend/dist/$1"
+      "dest": "nourish-your-profile-main/portfolio-frontend/dist/$1"
     }
   ]
 }
